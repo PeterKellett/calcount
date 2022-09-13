@@ -14,6 +14,10 @@ h1 {
     color: red;
 }
 
+a {
+    color: black;
+}
+
 /*----- Colours - End -----*/
 
 
@@ -31,7 +35,14 @@ h1 {
 }
 
 .accordion-button:focus {
-    border-color: red;
+    box-shadow: none;
+}
+
+.sub-accordion.accordion-button,
+.sub-accordion.accordion-button:not(.collapsed) {
+    height: 25px;
+    color: white;
+    background-color: grey;
 }
 
 /*----- Accordions - End -----*/
