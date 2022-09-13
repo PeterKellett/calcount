@@ -12,5 +12,91 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Hello world!</h1>
+    <div class="container">
+        <form action="" method="">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-10">
+                    <input type="text" class="form-control" name="search" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-2 text-right pl-0">
+                    <button type="submit" class="btn btn-outline-secondary ml-0 mr-0">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Icons and Links Section -->
+    <div class="container element-container">
+        <div class="row mt-2 mb-2">
+            <div class="col-1 col-css">
+                <i class="fas fa-info-circle icon-black fa-xl"></i>
+            </div>
+            <div class="col-1 col-css">
+                <a href=""><img src="{% static 'images/ingredients.png' %}" alt="ingredients icon" class="non-round-icon" height="25px"></a>
+            </div>
+            <div class="col-1 col-css">
+                <a href=""><img src="{% static 'images/recipe.png' %}" alt="recipe icon" class="non-round-icon" height="25px"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Filters -->
+    <div class="accordion accordion-flush" id="accordion-filters">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="filters-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filters-collapse" aria-expanded="false" aria-controls="filters-collapse">
+                FILTERS
+                </button>
+            </h2>
+            <div id="filters-collapse" class="accordion-collapse collapse" aria-labelledby="filters-heading" data-bs-parent="#accordion-filters">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+    <div class="accordion accordion-flush" id="accordion-search-results">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="search-results-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#search-results-collapse" aria-expanded="false" aria-controls="search-results-collapse">
+                SEARCH RESULTS
+                </button>
+            </h2>
+            <div id="search-results-collapse" class="accordion-collapse collapse" aria-labelledby="search-results-heading" data-bs-parent="#accordion-search-results">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recently Viewed -->
+    <div class="accordion accordion-flush" id="accordion-recently-viewed">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="recently-viewed-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#recently-viewed-collapse" aria-expanded="false" aria-controls="recently-viewed-collapse">
+                RECENTLY VIEWED
+                </button>
+            </h2>
+            <div id="recently-viewed-collapse" class="accordion-collapse collapse" aria-labelledby="recently-viewed-heading" data-bs-parent="#accordion-recently-viewed">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Blogs -->
+    <div class="accordion accordion-flush" id="accordion-latest-blogs">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="-latest-blogs-heading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#-latest-blogs-collapse" aria-expanded="false" aria-controls="-latest-blogs-collapse">
+                LATEST BLOGS
+                </button>
+            </h2>
+            <div id="-latest-blogs-collapse" class="accordion-collapse collapse" aria-labelledby="-latest-blogs-heading" data-bs-parent="#accordion--latest-blogs">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

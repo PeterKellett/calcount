@@ -2,6 +2,36 @@
     padding-top: 50px;
 } */
 
+main {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*---------------------- Colours - Start ---------------------*/
+
 h1 {
     color: red;
 }
+
+/*----- Colours - End -----*/
+
+
+/*---------------------- Accordians - Start ---------------------*/
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: black;
+}
+
+/*-- Partially taken from https://www.youtube.com/watch?v=E6x6jnYioHs @ 20:28 --*/
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(100%);
+}
+
+.accordion-button:focus {
+    border-color: red;
+}
+
+/*----- Accordions - End -----*/
